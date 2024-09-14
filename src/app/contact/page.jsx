@@ -83,7 +83,7 @@ export default function Contact() {
                                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Address</h3>
-                                    <p>123 Green Energy Street, Dhaka 1000, Bangladesh</p>
+                                    <p>7 Kawran Bazar Rd, Dhaka 1215, Bangladesh</p>
                                 </div>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Phone</h3>
@@ -95,9 +95,9 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold">Business Hours</h3>
-                                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
                                     <p>Saturday: 10:00 AM - 4:00 PM</p>
-                                    <p>Sunday: Closed</p>
+                                    <p>Friday: Closed</p>
                                 </div>
                             </motion.div>
                         </div>
