@@ -22,13 +22,13 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg text-gray-900' : 'bg-transparent text-white'
+            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg text-gray-900' : 'bg-transparent text-white'
                 }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className={`container mx-auto px-6 py-3  ${isScrolled && 'bg-white'}`}>
+            <div className={`container mx-auto px-6 py-3`}>
                 <div className={`flex items-center justify-between`}>
                     <Link href="/">
                         <motion.div
