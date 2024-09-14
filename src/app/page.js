@@ -94,8 +94,10 @@ const AboutSection = () => (
       <div className="flex flex-wrap items-center">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <Image
+            priority
             src="/green-energy-ecosystem.jpg"
             alt="Electric vehicle charging"
+            layout="responsive"
             width={600}
             height={400}
             className="rounded-lg shadow-lg"
