@@ -17,12 +17,12 @@ const Hero = () => {
             </div>
             <div className="relative z-10 h-full flex items-center">
                 <div className="container mx-auto px-4">
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                        Powering Bangladesh&apos;s
-                        <span className="text-green-400"> Sustainable Future</span>
+                    <h1 className="text-5xl md:text-7xl font-bold text-green-400 mb-6">
+                        The Green Idea
+                        <p className="text-white"> For A Clean Tomorrow</p>
                     </h1>
                     <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                        Leading the charge in renewable energy solutions and EV infrastructure development
+                        Charge Forward with Watts in Motion
                     </p>
                     <div className="flex gap-4">
                         <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-medium transition-colors">
