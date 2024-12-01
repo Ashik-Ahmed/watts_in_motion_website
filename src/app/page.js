@@ -4,12 +4,13 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Hero from './components/Hero'
+import Services from './components/Services'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ServicesSection />
+      <Services />
       <CtaSection />
     </div>
   )
