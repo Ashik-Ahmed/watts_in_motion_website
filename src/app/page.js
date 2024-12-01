@@ -2,55 +2,18 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
+import Hero from './components/Hero'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <HeroSection />
+      <Hero />
       <ServicesSection />
-      <AboutSection />
       <CtaSection />
     </div>
   )
 }
-
-const HeroSection = () => (
-  <section className="relative h-screen flex items-center justify-center overflow-hidden">
-    <Image
-      src="/e-vehicle-charging.webp"
-      alt="Electric car charging"
-      layout="fill"
-      objectFit="cover"
-      quality={100}
-    />
-    <div className="absolute inset-0 bg-black opacity-50"></div>
-    <div className="relative z-10 text-center text-white">
-      <motion.h1
-        className="text-5xl md:text-6xl font-bold mb-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Powering the Future
-      </motion.h1>
-      <motion.p
-        className="text-xl md:text-2xl mb-8"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        Innovating green energy ecosystem in Bangladesh
-      </motion.p>
-      <motion.button
-        className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Learn More
-      </motion.button>
-    </div>
-  </section>
-)
 
 const ServicesSection = () => (
   <section className="py-20 bg-gray-100">
@@ -86,42 +49,6 @@ const ServiceCard = ({ title, description, icon }) => (
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </motion.div>
-)
-
-const AboutSection = () => (
-  <section className="py-20">
-    <div className="container mx-auto px-6">
-      <div className="flex flex-wrap items-center">
-        <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <Image
-            priority
-            src="/green-energy-ecosystem.jpg"
-            alt="Electric vehicle charging"
-            layout="responsive"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-        <div className="w-full md:w-1/2 md:pl-12">
-          <h2 className="text-4xl font-bold mb-6">About Watts in Motion</h2>
-          <p className="text-gray-600 mb-6">
-            Watts in Motion is established to bring innovation in the green energy ecosystem in Bangladesh. We are pioneering the establishment of a charging station chain to provide comprehensive charging solutions for electric vehicles nationwide.
-          </p>
-          <p className="text-gray-600 mb-6">
-            Our mission is to become the market leader in e-vehicles and contribute significantly to a sustainable, eco-friendly future for Bangladesh.
-          </p>
-          <motion.button
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Learn More About Us
-          </motion.button>
-        </div>
-      </div>
-    </div>
-  </section>
 )
 
 const CtaSection = () => (

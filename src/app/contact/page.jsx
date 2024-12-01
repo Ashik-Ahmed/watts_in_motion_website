@@ -69,7 +69,7 @@ export default function Contact() {
                                     Send Message
                                 </motion.button>
                                 {formStatus === 'success' && (
-                                    <p className="text-green-500 mt-4">Thank you for your message. We'll get back to you soon!</p>
+                                    <p className="text-green-500 mt-4">Thank you for your message. We will get back to you soon!</p>
                                 )}
                             </motion.form>
                         </div>
