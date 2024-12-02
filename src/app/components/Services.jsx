@@ -1,31 +1,32 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 const Services = () => {
     const services = [
         {
             title: "Renewable Energy Trading",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/renewable_energy_trading.png",
         },
         {
             title: "Charging Station Network",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/charging_station.png",
         },
         {
             title: "Battery Management System",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/battery_management_system.png",
         },
         {
             title: "Renewable Energy Project Development",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/renewable_energy_project_development.png",
         },
         {
             title: "Green Technology Integration",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/green_technology_integration.png",
         },
         {
             title: "Energy Efficiency",
-            image: "/green-energy-ecosystem.jpg",
+            image: "/services/energy_efficiency.png",
         },
     ];
 
@@ -62,16 +63,18 @@ const ServiceCard = ({ title, image }) => (
     >
         {/* Image */}
         <div className="relative">
-            <img
+            <Image
                 src={image}
                 alt={title}
-                className="w-full h-48 object-cover group-hover:brightness-75 transition-all duration-500"
+                width={400}
+                height={400}
+                className="w-[400px] h-[280px] object-contain bg-green-400 p-4 rounded-xl group-hover:brightness-75 transition-all duration-500"
             />
         </div>
 
         {/* Overlay with Title */}
         <div className="absolute inset-0 bg-green-700 bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex items-center justify-center">
-            <h3 className="text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h3 className="text-white text-2xl font-semibold px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {title}
             </h3>
         </div>

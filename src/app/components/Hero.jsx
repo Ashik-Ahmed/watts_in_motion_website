@@ -7,7 +7,7 @@ const Hero = () => {
         <section className="relative h-screen">
             <div className="absolute inset-0">
                 <Image
-                    src="/e-vehicle-charging.webp"
+                    src="/watts_in_motion_banner.png"
                     alt="Solar panels and wind turbines"
                     fill
                     className="object-cover"

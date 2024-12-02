@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -31,13 +32,7 @@ const Navbar = () => {
             <div className={`container mx-auto px-6 py-3`}>
                 <div className={`flex items-center justify-between`}>
                     <Link href="/">
-                        <motion.div
-                            className="text-2xl font-bold text-green-600"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Watts in Motion
-                        </motion.div>
+                        <Image src="/watts_in_motion_logo.png" alt="Logo" width={60} height={60} />
                     </Link>
                     <div className="hidden md:flex space-x-4">
                         <NavLink href="/">Home</NavLink>
