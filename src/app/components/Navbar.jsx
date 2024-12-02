@@ -30,7 +30,7 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg text-gray-900' : 'bg-transparent text-white'
+            className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-gray-900
                 }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -44,9 +44,9 @@ const Navbar = () => {
                     <div className="hidden flex-grow-1 mx-auto md:flex space-x-4">
                         {
                             menus.map((menu, index) => (
-                                <NavLink key={index} href={menu?.href}>
+                                <Link key={index} href={menu?.href} className={`block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-white hover:bg-green-500`}>
                                     {menu?.name}
-                                </NavLink>
+                                </Link>
                             ))
                         }
                     </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         {
                             isMobileMenuOpen ? (
                                 <button
-                                    className={`focus:outline-none ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+                                    className={`focus:outline-none text-gray-900`}
                                     onClick={toggleMobileMenu}
                                 >
                                     <svg
@@ -74,7 +74,7 @@ const Navbar = () => {
                                 </button>
                             ) : (
                                 <button
-                                    className={`focus:outline-none ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+                                    className={`focus:outline-none text-gray-900`}
                                     onClick={toggleMobileMenu}
                                 >
                                     <svg
@@ -100,9 +100,9 @@ const Navbar = () => {
                     <div className="absolute md:hidden mt-2 space-y-2 bg-green-500 w-40 right-2">
                         {
                             menus.map((menu, index) => (
-                                <NavLink key={index} href={menu?.href}>
+                                <Link onClick={toggleMobileMenu} key={index} href={menu?.href} className="block px-3 py-2 rounded-md text-base font-medium text-white">
                                     {menu?.name}
-                                </NavLink>
+                                </Link>
                             ))
                         }
                     </div>
@@ -112,12 +112,5 @@ const Navbar = () => {
     )
 }
 
-const NavLink = ({ href, children }) => (
-    <Link href={href}>
-        <p className="block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-white hover:bg-green-500">
-            {children}
-        </p>
-    </Link>
-)
 
 export default Navbar

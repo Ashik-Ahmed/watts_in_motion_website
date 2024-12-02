@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Services = () => {
@@ -7,26 +8,32 @@ const Services = () => {
         {
             title: "Renewable Energy Trading",
             image: "/services/renewable_energy_trading.png",
+            link: "/services#renewable_energy_trading"
         },
         {
             title: "Charging Station Network",
             image: "/services/charging_station.png",
+            link: "/services#charging_station_network"
         },
         {
-            title: "Battery Management System",
+            title: "Charging Solutions & Battery Management System",
             image: "/services/battery_management_system.png",
+            link: "/services#charging_solutions"
         },
         {
             title: "Renewable Energy Project Development",
             image: "/services/renewable_energy_project_development.png",
+            link: "/services#renewable_energy_project"
         },
         {
             title: "Green Technology Integration",
             image: "/services/green_technology_integration.png",
+            link: "/services#green_technology_integration"
         },
         {
-            title: "Energy Efficiency",
+            title: "Energy Efficiency Consulting",
             image: "/services/energy_efficiency.png",
+            link: "/services#energy_efficiency_consulting"
         },
     ];
 
@@ -46,6 +53,7 @@ const Services = () => {
                         key={index}
                         title={service?.title}
                         image={service?.image}
+                        link={service?.link}
                     />
                 ))}
             </div>
@@ -56,30 +64,31 @@ const Services = () => {
 export default Services;
 
 
-const ServiceCard = ({ title, image }) => (
-    <motion.div
+const ServiceCard = ({ title, image, link }) => (
+    <Link
+        href={link}
         className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transform transition-transform duration-500 hover:scale-105"
         whileHover={{ y: -5 }}
     >
         {/* Image */}
-        <div className="relative">
+        <div className="relative bg-green-400 p-4">
             <Image
                 src={image}
                 alt={title}
                 width={400}
                 height={400}
-                className="w-[400px] h-[280px] object-contain bg-green-400 p-4 rounded-xl group-hover:brightness-75 transition-all duration-500"
+                className="w-[400px] h-[280px] object-contain mx-auto rounded-xl group-hover:brightness-75 transition-all duration-500"
             />
         </div>
 
         {/* Overlay with Title */}
-        <div className="absolute inset-0 bg-green-700 bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex items-center justify-center">
-            <h3 className="text-white text-2xl font-semibold px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-0 bg-green-700 bg-opacity-60 md:bg-opacity-0 md:group-hover:bg-opacity-70 transition-all duration-500 flex items-center justify-center">
+            <h3 className="text-white text-2xl font-semibold px-8 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                 {title}
             </h3>
         </div>
 
         {/* Bottom Ribbon */}
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-    </motion.div>
+    </Link>
 );
