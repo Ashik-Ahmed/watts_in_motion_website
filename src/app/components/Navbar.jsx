@@ -114,7 +114,7 @@ const Navbar = () => {
 
 const NavLink = ({ href, children }) => (
     <Link href={href}>
-        <p className="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-green-500">
+        <p className="block px-3 py-2 rounded-md text-base font-medium text-green-600 hover:text-white hover:bg-green-500">
             {children}
         </p>
     </Link>
