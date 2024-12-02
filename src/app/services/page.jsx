@@ -33,7 +33,7 @@ export default function Services() {
 
             <section id='renewable_energy_trading' className="py-20 bg-gray-100">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Renewable Energy Trading</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Renewable Energy Trading</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
                             <p>
@@ -41,17 +41,17 @@ export default function Services() {
                             </p>
                         </div>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                     </div>
                 </div>
             </section>
             <section id='charging_station_network' className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Charging Station Network</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Charging Station Network</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/charging_station.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                         <div className='w-1/2'>
                             <p>
@@ -63,7 +63,7 @@ export default function Services() {
             </section>
             <section id='charging_solutions' className="py-20 bg-gray-100">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Charging Solutions & Battery Management System</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Charging Solutions & Battery Management System</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
                             <p>
@@ -71,17 +71,17 @@ export default function Services() {
                             </p>
                         </div>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/battery_management_system.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                     </div>
                 </div>
             </section>
             <section id='renewable_energy_project' className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Renewable Energy Project Development</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Renewable Energy Project Development</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/renewable_energy_project_development.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                         <div className='w-1/2'>
                             <p>
@@ -93,7 +93,7 @@ export default function Services() {
             </section>
             <section id='green_technology_integration' className="py-20 bg-gray-100">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Green Technology Integration</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Green Technology Integration</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
                             <p>
@@ -101,17 +101,17 @@ export default function Services() {
                             </p>
                         </div>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/green_technology_integration.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                     </div>
                 </div>
             </section>
             <section id='energy_efficiency_consulting' className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Energy Efficiency Consulting</h2>
+                    <h2 className="text-3xl font-bold text-center mb-8">Energy Efficiency Consulting</h2>
                     <div className='flex flex-col md:flex-row items-center justify-between mx-auto gap-8'>
                         <div className='w-1/2'>
-                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto' />
+                            <Image src="/services/renewable_energy_trading.png" alt="Renewable Energy Trading" width={400} height={400} className='mx-auto w-[400px] h-[350px]' />
                         </div>
                         <div className='w-1/2'>
                             <p>
