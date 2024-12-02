@@ -9,6 +9,13 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+    const menus = [
+        { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
+        { name: 'Our Endeavors', href: '/services' },
+        { name: 'Contact', href: '/contact' },
+    ]
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10)
@@ -34,11 +41,14 @@ const Navbar = () => {
                     <Link href="/">
                         <Image src="/watts_in_motion_logo.png" alt="Logo" width={60} height={60} />
                     </Link>
-                    <div className="hidden md:flex space-x-4">
-                        <NavLink href="/">Home</NavLink>
-                        <NavLink href="/about">About</NavLink>
-                        <NavLink href="/services">Services</NavLink>
-                        <NavLink href="/contact">Contact</NavLink>
+                    <div className="hidden flex-grow-1 mx-auto md:flex space-x-4">
+                        {
+                            menus.map((menu, index) => (
+                                <NavLink key={index} href={menu?.href}>
+                                    {menu?.name}
+                                </NavLink>
+                            ))
+                        }
                     </div>
                     <div className="md:hidden">
                         {
@@ -88,10 +98,13 @@ const Navbar = () => {
                 </div>
                 {isMobileMenuOpen && (
                     <div className="absolute md:hidden mt-2 space-y-2 bg-green-500 w-40 right-2">
-                        <NavLink href="/">Home</NavLink>
-                        <NavLink href="/about">About</NavLink>
-                        <NavLink href="/services">Services</NavLink>
-                        <NavLink href="/contact">Contact</NavLink>
+                        {
+                            menus.map((menu, index) => (
+                                <NavLink key={index} href={menu?.href}>
+                                    {menu?.name}
+                                </NavLink>
+                            ))
+                        }
                     </div>
                 )}
             </div>

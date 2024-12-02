@@ -14,7 +14,7 @@ export default function Services() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        Our Services
+                        Our Endeavors
                     </motion.h1>
                     <motion.p
                         className="text-xl text-gray-600 text-center mb-12"
