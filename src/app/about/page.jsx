@@ -36,7 +36,7 @@ export default function About() {
             </section>
             <section className="pb-20">
                 <div className="container mx-auto px-6">
-                    <div className="flex items-center md:gap-x-16">
+                    <div className="md:flex items-center md:gap-x-16">
                         <div className="w-full  md:pl-12">
                             <motion.h1
                                 className="text-4xl md:text-5xl font-bold mb-8"
