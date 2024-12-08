@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RxArrowTopRight } from "react-icons/rx";
 
 
 const Services = () => {
@@ -46,13 +47,13 @@ const Services = () => {
                     Leading the way in green technology solutions for a sustainable future.
                 </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
-                        title={service?.title}
-                        image={service?.image}
-                        link={service?.link}
+                        title={service.title}
+                        image={service.image}
+                        link={service.link}
                     />
                 ))}
             </div>
@@ -62,32 +63,25 @@ const Services = () => {
 
 export default Services;
 
-
-const ServiceCard = ({ title, image, link }) => (
-    <Link
-        href={link}
-        className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transform transition-transform duration-500 hover:scale-105"
-        whileHover={{ y: -5 }}
-    >
-        {/* Image */}
-        <div className="relative bg-secondary p-2 md:p-4">
-            <Image
-                src={image}
-                alt={title}
-                width={400}
-                height={400}
-                className="md:w-[400px] md:h-[280px] object-contain mx-auto rounded-xl group-hover:brightness-75 transition-all duration-500"
-            />
-        </div>
-
-        {/* Overlay with Title */}
-        <div className="absolute inset-0 bg-green-700 bg-opacity-60 md:bg-opacity-0 md:group-hover:bg-opacity-70 transition-all duration-500 flex items-center justify-center">
-            <h3 className="text-white text-center text-lg md:text-2xl font-semibold px-2 md:px-8 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-                {title}
-            </h3>
-        </div>
-
-        {/* Bottom Ribbon */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-500 to-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-    </Link>
-);
+function ServiceCard({ title, image, link }) {
+    return (
+        <Link href={link} className={`relative group cursor-pointer`}>
+            <div className="relative overflow-hidden rounded-lg">
+                <Image
+                    src={image}
+                    alt={title}
+                    width={500}
+                    height={500}
+                    className="w-full h-[350px] object-contain transition-transform duration-300 group-hover:scale-110 bg-teal-600/30"
+                />
+                <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:bg-black/80" />
+            </div>
+            <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                <span className="text-white text-xl font-medium">{title}</span>
+                <div className="bg-yellow-400 p-1 rounded-full transform transition-transform duration-300 group-hover:rotate-45">
+                    <RxArrowTopRight size={30} className="w-6 h-6 text-black" />
+                </div>
+            </div>
+        </Link>
+    );
+}

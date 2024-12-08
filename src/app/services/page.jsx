@@ -69,6 +69,7 @@ export default function Services() {
                 {
                     service.map((service, index) => (
                         <div
+                            id={service.sectionId}
                             key={service.title}
                             className={`${service.bgColor} relative flex flex-col md:flex-row items-center rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-transform duration-500 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                         >
