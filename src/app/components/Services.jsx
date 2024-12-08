@@ -46,7 +46,7 @@ const Services = () => {
                     Leading the way in green technology solutions for a sustainable future.
                 </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
@@ -70,19 +70,19 @@ const ServiceCard = ({ title, image, link }) => (
         whileHover={{ y: -5 }}
     >
         {/* Image */}
-        <div className="relative bg-secondary p-4">
+        <div className="relative bg-secondary p-2 md:p-4">
             <Image
                 src={image}
                 alt={title}
                 width={400}
                 height={400}
-                className="w-[400px] h-[280px] object-contain mx-auto rounded-xl group-hover:brightness-75 transition-all duration-500"
+                className="md:w-[400px] md:h-[280px] object-contain mx-auto rounded-xl group-hover:brightness-75 transition-all duration-500"
             />
         </div>
 
         {/* Overlay with Title */}
         <div className="absolute inset-0 bg-green-700 bg-opacity-60 md:bg-opacity-0 md:group-hover:bg-opacity-70 transition-all duration-500 flex items-center justify-center">
-            <h3 className="text-white text-2xl font-semibold px-8 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
+            <h3 className="text-white text-center text-lg md:text-2xl font-semibold px-2 md:px-8 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
                 {title}
             </h3>
         </div>

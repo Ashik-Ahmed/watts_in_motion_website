@@ -19,7 +19,7 @@ const CtaSection = () => (
       <p className="text-xl mb-8">Contact us today to learn more about our services and how we can help you transition to sustainable energy solutions.</p>
       <Link
         href="/contact"
-        className="bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
+        className="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
       >
         Get in Touch
       </Link>
