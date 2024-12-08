@@ -23,17 +23,15 @@ const Navbar = () => {
     };
 
     return (
-        <nav
-            className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-gray-900`}
-        >
-            <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+        <nav className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-gray-900`}>
+            <div className="container mx-auto py-1 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/">
                     <Image
                         src="/watts_in_motion_logo.png"
-                        alt="Logo"
-                        width={60}
-                        height={60}
+                        alt="Watts in Motion Logo"
+                        width={80}
+                        height={80}
                         className="cursor-pointer"
                     />
                 </Link>
@@ -55,8 +53,7 @@ const Navbar = () => {
                 <button
                     className="md:hidden focus:outline-none"
                     onClick={toggleMobileMenu}
-                    aria-label="Toggle menu"
-                >
+                    aria-label="Toggle menu">
                     {isMobileMenuOpen ? (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

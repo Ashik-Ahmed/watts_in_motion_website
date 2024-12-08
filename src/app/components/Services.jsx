@@ -89,6 +89,6 @@ const ServiceCard = ({ title, image, link }) => (
         </div>
 
         {/* Bottom Ribbon */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-yellow-500 to-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
     </Link>
 );
