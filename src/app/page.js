@@ -1,7 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -17,7 +13,7 @@ export default function Home() {
 }
 
 const CtaSection = () => (
-  <section className="py-20 bg-green-600 text-white">
+  <section className="py-20 bg-primary text-white">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold mb-4">Ready to Join the Green Revolution?</h2>
       <p className="text-xl mb-8">Contact us today to learn more about our services and how we can help you transition to sustainable energy solutions.</p>

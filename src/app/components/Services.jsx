@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,7 +39,7 @@ const Services = () => {
     return (
         <section className="container mx-auto py-20 px-4">
             <div className="mb-12">
-                <h2 className="text-4xl font-bold text-center text-green-700">
+                <h2 className="text-4xl font-bold text-center text-primary">
                     What We Offer
                 </h2>
                 <p className="text-center text-gray-500 mt-4">
@@ -71,7 +70,7 @@ const ServiceCard = ({ title, image, link }) => (
         whileHover={{ y: -5 }}
     >
         {/* Image */}
-        <div className="relative bg-green-400 p-4">
+        <div className="relative bg-secondary p-4">
             <Image
                 src={image}
                 alt={title}

@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
             <div className="relative z-10 h-full flex items-center">
                 <div className="container mx-auto px-4">
-                    <h1 className="text-4xl md:text-7xl font-bold text-green-400 mb-6">
+                    <h1 className="text-3xl md:text-7xl font-bold text-green-400 mb-6">
                         The Green Idea
                         <p className="text-white">For A Clean Tomorrow</p>
                     </h1>
