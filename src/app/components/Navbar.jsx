@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const currentPath = usePathname();
 
     const menus = [
         { name: 'Home', href: '/' },
@@ -16,25 +18,13 @@ const Navbar = () => {
         { name: 'Contact', href: '/contact' },
     ];
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     return (
-        <motion.nav
-            className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-gray-900 ${isScrolled ? 'shadow-lg bg-opacity-90' : 'shadow-none'
-                }`}
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
+        <nav
+            className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-gray-900`}
         >
             <div className="container mx-auto px-6 py-3 flex items-center justify-between">
                 {/* Logo */}
@@ -49,12 +39,12 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-6">
+                <div className="w-full justify-center hidden md:flex items-center space-x-6">
                     {menus.map((menu, index) => (
                         <Link
                             key={index}
                             href={menu.href}
-                            className="text-base font-medium text-green-600 hover:text-white hover:bg-green-500 px-3 py-2 rounded transition-all"
+                            className={`text-base font-medium text-green-600 hover:text-white hover:bg-green-500 px-3 py-2 rounded transition-all ${currentPath === menu.href ? 'bg-green-500 text-white' : ''}`}
                         >
                             {menu.name}
                         </Link>
@@ -107,7 +97,7 @@ const Navbar = () => {
                             <Link
                                 key={index}
                                 href={menu.href}
-                                className="block px-4 py-2 text-base hover:bg-green-600 transition-all rounded"
+                                className={`block px-4 py-2 text-base hover:bg-green-600 transition-all rounded ${currentPath === menu.href ? 'bg-white text-green-600' : ''}`}
                                 onClick={toggleMobileMenu}
                             >
                                 {menu.name}
@@ -116,7 +106,7 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-        </motion.nav>
+        </nav>
     );
 };
 
