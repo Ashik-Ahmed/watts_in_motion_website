@@ -14,8 +14,31 @@ export default function Contact() {
     }
 
     return (
-        <div className="min-h-screen pt-20">
-            <section className="py-20">
+        <div className="min-h-screen">
+            <section id='services_hero' className="py-20">
+                <div className="container mx-auto px-6">
+                    <div>
+                        <p className='text-green-400'>{`Home > About`}</p>
+                    </div>
+                    {/* <motion.h1
+                        className="text-4xl md:text-5xl font-bold mt-8 mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Our Endeavors
+                    </motion.h1>
+                    <motion.p
+                        className="text-xl text-gray-600 mb-12"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        To drive the future with clean energy and sustainable solutions, we have outlined our task with careful strategies.
+                    </motion.p> */}
+                </div>
+            </section>
+            <section className="md:py-20 py-8">
                 <div className="container mx-auto px-6">
                     <motion.h1
                         className="text-4xl md:text-5xl font-bold mb-8 text-center"
@@ -83,11 +106,11 @@ export default function Contact() {
                                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Address</h3>
-                                    <p>7 Kawran Bazar Rd, Dhaka 1215, Bangladesh</p>
+                                    <p>BTMC Bhaban (7th Floor), 7-9 Kawran Bazar, Dhaka- 1217, Bangladesh</p>
                                 </div>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Phone</h3>
-                                    <p>+880 1234 567890</p>
+                                    <p>+880-2-8189244, +880-2-8189321, +880-2-58155623</p>
                                 </div>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Email</h3>
@@ -95,9 +118,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold">Business Hours</h3>
-                                    <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
-                                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                                    <p>Friday: Closed</p>
+                                    <p>Sunday - Thursday: 9:30 AM - 5:30 PM</p>
+                                    <p>Friday - Saturday: Closed</p>
                                 </div>
                             </motion.div>
                         </div>
