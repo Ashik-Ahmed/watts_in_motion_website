@@ -18,7 +18,7 @@ export default function Contact() {
             <section id='services_hero' className="py-20">
                 <div className="container mx-auto px-6">
                     <div>
-                        <p className='text-green-400'>{`Home > About`}</p>
+                        <p className='text-green-400'>{`Home > Contact`}</p>
                     </div>
                     {/* <motion.h1
                         className="text-4xl md:text-5xl font-bold mt-8 mb-4"

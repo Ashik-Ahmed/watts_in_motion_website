@@ -1,12 +1,12 @@
 @keyframes float {
     0% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-5px); /* Reduced height */
     }
     100% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
   }
   
@@ -17,5 +17,4 @@
   .about-page .mission-vision-card:nth-child(2) {
     animation-delay: 3s;
   }
-  
   
