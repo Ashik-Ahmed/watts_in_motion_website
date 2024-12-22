@@ -36,7 +36,7 @@ const Footer = () => {
                     <p className="text-gray-400">&copy; {new Date().getFullYear()} Watts in Motion. All rights reserved.</p>
                 </div>
                 <div className='text-center mt-2'>
-                    <p className='text-xs text-gray-400 italic'>Developed by <Link href="https://ashik-ahmed.vercel.app" className='text-secondary hover:text-primary transition-colors duration-300'>Ashik Ahmed</Link></p>
+                    <p className='text-xs text-gray-400 italic'>Developed by <Link href="https://lamdatelecombd.com/" target='_blank' className='text-secondary hover:text-primary transition-colors duration-300'>Lamda Telecom</Link></p>
                 </div>
             </div>
         </footer>

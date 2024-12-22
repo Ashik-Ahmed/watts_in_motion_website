@@ -25,6 +25,27 @@ export default function Services() {
             sectionId: "charging_solutions"
         },
         {
+            title: "Turbine & Wind Farm Management",
+            description: "Bangladesh holds significant potential in harnessing wind energy, and Watts in Motion is committed to strategically contributing to this promising sector. Building on wind power mapping, we aim to identify optimal locations and participate in installing strategically placed wind turbines. Our focus will be on driving advancements in Turbine & Wind Farm Management to unlock the country’s renewable energy capabilities. Through innovative and efficient solutions, we aspire to play a key role in shaping a greener future for Bangladesh.",
+            image: "/services/turbine_and_wind_farm_management.png",
+            bgColor: "bg-gradient-to-br from-gray-50 to-white",
+            sectionId: "turbine_and_wind_farm_management"
+        },
+        {
+            title: "Solar Power Plantation",
+            description: "Bangladesh has immense potential for solar energy, and Watts in Motion is strategically focused on advancing this sector. Our goal is to develop solar farms to harness the abundant sunlight available nationwide. By integrating advanced solar technologies and adopting a structured approach, we aim to unlock this renewable energy potential, providing reliable and sustainable energy solutions. We are hopeful that our efforts will contribute to powering communities and fostering a greener, more resilient future for Bangladesh.",
+            image: "/services/solar_power_plantation.jpg",
+            bgColor: "bg-gradient-to-br from-gray-50 to-white",
+            sectionId: "solar_power_plantation"
+        },
+        {
+            title: "Hydrogen (H₂) Production",
+            description: "Bangladesh holds immense potential in the green energy sector, and Watts in Motion is poised to contribute to this promising future strategically. We are exploring hydrogen (H₂) production from bioethanol as a renewable energy solution that can generate power and co-generate heat (CHP). With the advancements in second-generation bioethanol, we are committed to developing optimized, economically sustainable processes. By tapping into this potential, we aim to position hydrogen as a key player in Bangladesh’s green energy landscape, supporting a cleaner, more resilient future for the country. Our participation will be strategic and development-focused, working with local and global initiatives to drive the country’s energy transition.",
+            image: "/services/hydrogen_production.svg",
+            bgColor: "bg-gradient-to-br from-gray-50 to-white",
+            sectionId: "hydrogen_production"
+        },
+        {
             title: "Renewable Energy Project Development",
             description: "From Watts in Motion, we are committed to driving the growth of renewable energy in Bangladesh. Our project on Renewable Energy will focus on creating sustainable energy solutions through solar, wind, and other clean technologies. The designs we are crafting will reduce carbon footprints, lower energy costs, and provide reliable power to communities and businesses. By harnessing the power of nature, we aim to build a greener, more energy-efficient Bangladesh.",
             image: "/services/renewable_energy_project_development.png",
