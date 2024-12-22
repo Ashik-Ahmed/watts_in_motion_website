@@ -86,7 +86,7 @@ export default function Contact() {
                                 </div>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Phone</h3>
-                                    <p>+880-2-8189244, +880-2-8189321, +880-2-58155623</p>
+                                    <p>+880-2-55013775, +880-2-55013830</p>
                                 </div>
                                 <div className="mb-4">
                                     <h3 className="font-bold">Email</h3>
