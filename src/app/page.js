@@ -15,8 +15,8 @@ export default function Home() {
 const CtaSection = () => (
   <section className="py-20 bg-primary text-white">
     <div className="container mx-auto px-6 text-center">
-      <h2 className="text-4xl font-bold mb-4">Ready to Join the Green Revolution?</h2>
-      <p className="text-xl mb-8">Contact us today to learn more about our services and how we can help you transition to sustainable energy solutions.</p>
+      <h2 className="text-4xl font-bold mb-4">Building the Future of Clean Energy Together</h2>
+      <p className="text-xl mb-8">Explore how Watts in Motion is working towards creating a sustainable energy landscape and how you can contribute to this vision.</p>
       <Link
         href="/contact"
         className="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300"
