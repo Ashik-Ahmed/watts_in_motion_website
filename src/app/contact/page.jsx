@@ -3,13 +3,45 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
+
+async function sendEmail(formData) {
+    try {
+        const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data.success) {
+            console.log('Email sent successfully!');
+            window.alert('We have received your message!');
+        } else {
+            console.error('Failed to send email:', data.message);
+            window.alert('Failed to send email. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error:', error.message);
+        window.alert('An error occurred. Please try again.');
+    }
+}
+
 export default function Contact() {
     const [formStatus, setFormStatus] = useState(null)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Here you would typically handle the form submission, e.g., send data to a server
-        // For this example, we'll just simulate a successful submission
+
+        const data = new FormData(e.target)
+        const formData = Object.fromEntries(data)
+        console.log(formData);
+
+        // sendEmail(formData)
+
         setFormStatus('success')
     }
 
@@ -54,6 +86,12 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="mb-6">
+                                    <label htmlFor="subject" className="block text-white font-bold mb-2">Subject</label>
+                                    <input type="subject" id="subject" name="subject" required
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
+                                    />
+                                </div>
+                                <div className="mb-6">
                                     <label htmlFor="message" className="block text-white font-bold mb-2">Message</label>
                                     <textarea id="message" name="message" rows="4" required
                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -68,7 +106,7 @@ export default function Contact() {
                                     Send Message
                                 </motion.button>
                                 {formStatus === 'success' && (
-                                    <p className="text-secondary mt-4">Thank you for your message. We will get back to you soon!</p>
+                                    <p className="text-yellow-500 mt-4">Thank you for your message. We will get back to you soon!</p>
                                 )}
                             </motion.form>
                         </div>
