@@ -17,16 +17,11 @@ async function sendEmail(formData) {
         }
 
         const data = await response.json();
-        if (data.success) {
-            console.log('Email sent successfully!');
-            window.alert('We have received your message!');
-        } else {
-            console.error('Failed to send email:', data.message);
-            window.alert('Failed to send email. Please try again.');
-        }
+        console.log("email status: ", data);
+        return data;
     } catch (error) {
         console.error('Error:', error.message);
-        window.alert('An error occurred. Please try again.');
+        return { error: error.message };
     }
 }
 
@@ -40,9 +35,15 @@ export default function Contact() {
         const formData = Object.fromEntries(data)
         console.log(formData);
 
-        // sendEmail(formData)
+        const email = sendEmail(formData)
 
-        setFormStatus('success')
+        if (email.success) {
+            setFormStatus('success')
+        }
+
+        if (email.error) {
+            setFormStatus('error')
+        }
     }
 
     return (
@@ -105,9 +106,17 @@ export default function Contact() {
                                 >
                                     Send Message
                                 </motion.button>
-                                {formStatus === 'success' && (
-                                    <p className="text-yellow-500 mt-4">Thank you for your message. We will get back to you soon!</p>
-                                )}
+                                {formStatus === 'success' &&
+                                    (
+                                        <p className="text-yellow-500 mt-4">Thank you for your message. We will get back to you soon!</p>
+                                    )
+                                }
+                                {
+                                    formStatus === 'error' &&
+                                    (
+                                        <p className="text-white bg-red-500 mt-4">Something went wrong. Please try again later.</p>
+                                    )
+                                }
                             </motion.form>
                         </div>
                         <div className="w-full lg:w-1/2 px-4">

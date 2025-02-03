@@ -19,7 +19,7 @@ export async function POST(req) {
         // Email options
         const mailOptions = {
             from: `"${name}" <${email}>`, // Sender address
-            to: 'info@coastalgas.com.bd', // Recipient email
+            to: 'info@wattsinmotion.com', // Recipient email
             subject: subject, // Subject line
             text: message, // Plain text body
             html: `<p>${message}</p>` // HTML body
@@ -27,8 +27,6 @@ export async function POST(req) {
 
         // Send the email
         const info = await transporter.sendMail(mailOptions);
-
-        console.log('Email sent: %s', info.messageId);
 
         return new Response(
             JSON.stringify({ success: true, message: 'Email sent successfully!' }),
