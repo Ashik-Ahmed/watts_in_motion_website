@@ -4,46 +4,52 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 
-async function sendEmail(formData) {
-    try {
-        const response = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("email status: ", data);
-        return data;
-    } catch (error) {
-        console.error('Error:', error.message);
-        return { error: error.message };
-    }
-}
 
 export default function Contact() {
     const [formStatus, setFormStatus] = useState(null)
+    const [emailLoading, setEmailLoading] = useState(false)
 
-    const handleSubmit = (e) => {
+
+    async function sendEmail(formData) {
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data;
+
+        } catch (error) {
+            console.error('Error:', error.message);
+            return { error: error.message };
+        }
+    }
+
+    const handleSubmit = async (e) => {
+        setEmailLoading(true)
         e.preventDefault()
 
+        const form = e.target;
         const data = new FormData(e.target)
         const formData = Object.fromEntries(data)
-        console.log(formData);
 
-        const email = sendEmail(formData)
+        const email = await sendEmail(formData)
 
         if (email.success) {
             setFormStatus('success')
+            form.reset();
         }
 
         if (email.error) {
             setFormStatus('error')
         }
+        setEmailLoading(false)
     }
 
     return (
@@ -100,7 +106,7 @@ export default function Contact() {
                                 </div>
                                 <motion.button
                                     type="submit"
-                                    className="bg-yellow-400 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition-colors duration-300"
+                                    className={`bg-yellow-400 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition-colors duration-300 ${emailLoading ? 'disabled' : ''}`}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
